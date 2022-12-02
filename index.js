@@ -1,6 +1,20 @@
 function makeTimer() {
+    var dayOfHope = 5;
+    var endTime = new Date("December"+ dayOfHope +", 2022 18:00:00 PDT");	
+    
+    // To set present_dates to two variables
+    var present_date = new Date();
+    
+    // To calculate the time difference of two dates
+    var Difference_In_Time = present_date.getTime() - endTime.getTime();
 
-    var endTime = new Date("December 1, 2022 18:00:00 PDT");			
+    // To calculate the no. of days between two dates
+    var Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
+
+    if(Difference_In_Days > 0){
+        var endTime = new Date("December" + (dayOfHope + Difference_In_Days) + ", 2022 18:00:00 PDT");
+    }
+    
     var endTime = (Date.parse(endTime)) / 1000;
 
     var now = new Date();
