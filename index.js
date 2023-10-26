@@ -1,6 +1,22 @@
+var FrameCollection = ["https://giphy.com/embed/2uwZ4xi75JhxZYeyQB", 
+                       "https://giphy.com/embed/6D4HjBgVUazFPOIASb", 
+                       "https://giphy.com/embed/8TT8VjZTZGWQw", 
+                       "https://giphy.com/embed/16hOFSI1ulb7a", 
+                       "https://giphy.com/embed/BTSXfb3oxC0g0", 
+                       "https://giphy.com/embed/PWfHC8ogZpWcE", 
+                       "https://giphy.com/embed/hCiQVo1dzVwPu", 
+                       "https://giphy.com/embed/u5eXlkXWkrITm", 
+                       "https://giphy.com/embed/ZXKZWB13D6gFO",
+                       "https://giphy.com/embed/D4mFxzEEGguAM"];
+
+function setFrame(){
+    document.getElementById('WaitFrame').src = FrameCollection[Math.floor(Math.random() * 10)];
+}
+
 function makeTimer() {
-    var dayOfHope = 5;
-    var endTime = new Date("December"+ dayOfHope +", 2022 18:00:00 PDT");	
+    var dayOfHope = 15;
+    var year = new Date().getFullYear();
+    var endTime = new Date("December"+ dayOfHope +", " + year + " 18:00:00 PDT");	
     
     // To set present_dates to two variables
     var present_date = new Date();
@@ -12,7 +28,7 @@ function makeTimer() {
     var Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
 
     if(Difference_In_Days > 0){
-        var endTime = new Date("December" + (dayOfHope + Difference_In_Days) + ", 2022 18:00:00 PDT");
+        var endTime = new Date("December" + (dayOfHope + Difference_In_Days) + ", " + year + " 18:00:00 PDT");
     }
     
     var endTime = (Date.parse(endTime)) / 1000;
@@ -35,5 +51,4 @@ function makeTimer() {
     $("#hours").html(hours + "<span>Hours</span>");
     $("#minutes").html(minutes + "<span>Minutes</span>");
     $("#seconds").html(seconds + "<span>Seconds</span>");		
-
 }
