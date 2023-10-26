@@ -9,6 +9,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script>
+        let FrameCollection = ["https://giphy.com/embed/2uwZ4xi75JhxZYeyQB", 
+                       "https://giphy.com/embed/6D4HjBgVUazFPOIASb", 
+                       "https://giphy.com/embed/8TT8VjZTZGWQw", 
+                       "https://giphy.com/embed/16hOFSI1ulb7a", 
+                       "https://giphy.com/embed/BTSXfb3oxC0g0", 
+                       "https://giphy.com/embed/PWfHC8ogZpWcE", 
+                       "https://giphy.com/embed/hCiQVo1dzVwPu", 
+                       "https://giphy.com/embed/u5eXlkXWkrITm", 
+                       "https://giphy.com/embed/ZXKZWB13D6gFO",
+                       "https://giphy.com/embed/D4mFxzEEGguAM"];
         window.onload = function () {document.getElementById('WaitFrame').src = FrameCollection[Math.floor(Math.random() * 10)] } ;
         setInterval(function() { makeTimer(); }, 1000);
     </script>
