@@ -1,4 +1,4 @@
-var FrameCollection = ["https://giphy.com/embed/2uwZ4xi75JhxZYeyQB", 
+/*var FrameCollection = ["https://giphy.com/embed/2uwZ4xi75JhxZYeyQB", 
                        "https://giphy.com/embed/6D4HjBgVUazFPOIASb", 
                        "https://giphy.com/embed/8TT8VjZTZGWQw", 
                        "https://giphy.com/embed/16hOFSI1ulb7a", 
@@ -11,7 +11,7 @@ var FrameCollection = ["https://giphy.com/embed/2uwZ4xi75JhxZYeyQB",
 
 function setFrame(){
     document.getElementById('WaitFrame').src = FrameCollection[Math.floor(Math.random() * 10)];
-}
+}*/
 
 function makeTimer() {
     var dayOfHope = 15;
